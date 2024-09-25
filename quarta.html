@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sp = 67836.46
+        var rj = 36678.66
+        var mg = 29229.88
+        var es = 27165.48
+        var outros = 19849.53
+
+        var somaTotal = sp+rj+mg+es+outros;
+        var calculoPercentualSP = ((sp*100)/somaTotal).toFixed(2)
+        var calculoPercentualRJ = ((rj*100)/somaTotal).toFixed(2)
+        var calculoPercentualMG = ((mg*100)/somaTotal).toFixed(2)
+        var calculoPercentualES = ((es*100)/somaTotal).toFixed(2)
+        var calculoPercentualOUTROS = ((outros*100)/somaTotal).toFixed(2)
+
+        
+
+        document.write("SP - R$67.836,43 - "+calculoPercentualSP+"%"+"<br>RJ - R$36.678,66 - "+calculoPercentualRJ+"%"+"<br>MG - R$29.229,88 - "+calculoPercentualMG+"%"+"<br>ES - R$27.165,48 - "+calculoPercentualES+"%"+"<br>Outros – R$19.849,53 - "+calculoPercentualOUTROS+"%")
+    </script>
+</body>
+</html>

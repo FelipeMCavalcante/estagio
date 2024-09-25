@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var faturamentoDiario = [1000, 1500, 800, 0, 1200, 1300, 1400, 0, 2000, 100, 3000, 2500, 1100, 1800, 0, 2100, 2200, 1700, 0, 1300, 1600, 1700, 0, 900, 800, 0, 1200, 900, 1600, 0];
+        var dadosFaturamento = faturamentoDiario.filter(valor => valor > 0);
+        function media(vetor) {
+            var soma = 0;
+            for (var i = 0; i < vetor.length; i++) {
+                soma += vetor[i];
+            }
+            return soma / vetor.length;
+        }
+
+        function menorValor(vetor) {
+            return Math.min(...vetor);
+        }
+
+        function maiorValor(vetor) {
+            return Math.max(...vetor);
+        }
+
+        function diasAcimaDaMedia(vetor, media) {
+            let count = 0;
+            for (let i = 0; i < vetor.length; i++) {
+                if (vetor[i] > media) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        var menor = menorValor(dadosFaturamento);
+        var maior = maiorValor(dadosFaturamento);
+        var media = media(dadosFaturamento);
+        var diasAcimaMedia = diasAcimaDaMedia(dadosFaturamento, media);
+
+        document.write("Menor valor de faturamento: " + menor);
+        document.write("<br>Maior valor de faturamento: " + maior);
+        document.write("<br>Número de dias com faturamento acima da média: " + diasAcimaMedia);
+    </script>
+</body>
+</html>

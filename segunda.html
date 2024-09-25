@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacci(numero){
+            var a=0, b=1,temp
+            while (a<numero){
+                temp =a+b
+                a=b
+                b=temp
+            }
+            return  a === numero
+        }
+        var numero_escolhido = parseInt(prompt("Qual número você gostaria de ver se pertence à fibonacci:"))
+        if(fibonacci(numero_escolhido)){
+            document.write("O número " +numero_escolhido+" pertence a fibonacci")
+        }
+        else{
+            document.write("O número " +numero_escolhido+" não pertence a fibonacci")
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inverter(str) {
+    var stringInvertida = '';
+    
+    for (var i = str.length - 1; i >= 0; i--) {
+        stringInvertida += str[i];}
+    
+    return stringInvertida;
+}
+
+var stringOriginal = prompt("escreva uma frase");
+var stringInvertida = inverter(stringOriginal);
+
+document.write("String original: " + stringOriginal + "<br>");
+document.write("String invertida: " + stringInvertida);
+
+    </script>
+</body>
+</html>
